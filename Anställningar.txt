@@ -1,0 +1,16 @@
+*
+Titel: Djurskötare
+Arbetsgivare: Parken Zoo
+År: 1846
+Beskrivning: Jag tog hand om djur.
+*
+Titel: Bilmekaniker
+Arbetsgivare: BMW
+År: 1920
+Beskrivning: Jag byggde en lådbil.
+*
+Titel: Trädgårdsmästare
+Arbetsgivare: Forsbacka Herrgård
+År: 1730
+Beskrivning: Jag var den främste trädgårdsmästaren i hushållet.
+*

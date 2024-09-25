@@ -1,0 +1,214 @@
+Body{
+  background-color: rgb(88, 90, 99);
+  background-image: url("./images/BG.png");
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+html{
+  overflow-y: hidden;
+}
+/* #ToppVy {
+  background-color: rgb(44, 97, 212);
+  height: fit-content;
+  margin: 0%;
+  text-align: center;
+  width: auto;
+} */
+#MainGrid{
+  top: 0px;
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 4% 90% 6%;
+  align-items: center;
+}
+
+#TopGrid{
+  position: sticky;
+  top: 0px;
+  background-color: rgb(43, 45, 52);
+  align-items: center;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 0.5em;
+  height: max-content;
+}
+#TopLeftCol{
+  display: flex;
+  align-items: start;
+}
+#TopMidCol{
+  align-items: center;
+}
+#TopRightCol{
+  align-items: end;
+}
+#MidGrid{
+  height: 80vh;
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+#MidMidCol{
+  height: auto;
+  align-items: center;
+  margin: 4% auto 4% auto;
+  overflow-y: auto;
+}
+#MyPhoto{
+  width: 20em;
+  height: 20em;
+  position:relative;
+  top: 20%;
+  align-self: center;
+}
+#MidMidCol::-webkit-scrollbar {
+  width: 0.8em;               /* width of the entire scrollbar */
+}
+
+#MidMidCol::-webkit-scrollbar-track {
+  background: none;        /* color of the tracking area */
+}
+
+#MidMidCol::-webkit-scrollbar-thumb {
+  background-color: rgb(43, 45, 52);   /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 2px;  /* creates padding around scroll thumb */
+}
+#MidLeftCol{
+  align-items: center;
+  text-align: left;
+  left:0%;
+  margin: auto;
+}
+#MidRightCol{
+  align-items: center;
+  right: 0%;
+  text-align: right;
+  margin: auto;
+}
+#BotGrid{
+background-color: rgb(43, 45, 52);
+position: sticky;
+bottom: 0px;
+align-items: start;
+display: grid;
+grid-template-columns: auto auto auto;
+}
+#BotLeftCol{
+  display: flex;
+  align-items: start;
+  margin: 0%;
+  width: fit-content;
+}
+#BotMidCol{
+  align-items: center;
+  width: fit-content;
+  margin: 0%;
+}
+#BotRightCol{
+  align-items: end;
+  width: fit-content;
+  margin: 0%;
+}
+.Logotypes{
+  height: auto;
+  width: auto;
+  margin: 0;
+  padding: 0.1em;
+}
+.Logotypes:hover{
+  scale: 1.2;
+}
+#Kontakt{
+  text-align: left;
+  font-size: 10px;
+  color: aliceblue;
+  margin: 0%;
+  padding: 0.6em;
+}
+.KontaktText{
+  margin: 0%;
+}
+#HuvudTitel{
+  font-size: 1.8em;
+  height: 50%;
+
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color:beige;
+  margin: 0%;
+}
+#IntroductionText{
+  text-align: right;
+  color:rgba(245, 245, 220, 0.5);
+  font-size: 1em;
+  max-width: 18em;
+}
+
+#Container {
+  display: flex;
+}
+/* #VisningsFönster {
+  background-color: rgba(240, 248, 255, 0.7);
+  margin: 0em 2em 0em 2em;
+  padding: 1em;
+  width: 100%;
+} */
+
+/* #SidMeny {
+  display: flex;
+  height: 1.5em;
+  z-index: 99;
+} */
+.TopMenyVal {
+height: auto;
+width: fit-content;
+color: beige;
+  padding: 0.5em;
+  font-size: 14px;
+  margin: 0 10px 0 0;
+  background-color: rgb(46, 53, 67);
+  cursor: pointer;
+  border-radius: 1em
+}
+.TopMenyVal:hover{
+    /* background-color: rgb(52, 194, 255); */
+    background-color: rgb(56, 65, 77);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#listRad{
+  display: grid;
+  width: 50%;
+}
+#Photo{
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+
+.Titel1{
+  font-size: 19px;
+  color: rgb(187, 199, 210)
+}
+p{
+  font-size: 14px;
+}
+
+.plats{
+  font-size: 18px;
+  color: rgb(187, 199, 210)
+}
+.titel{
+  font-size: 17px;
+}
+.årtal{
+  font-size: 17px;
+}
+.beskrivning{
+  font-size: 16px;
+  width: max-content;
+  max-width: 40em;
+}
