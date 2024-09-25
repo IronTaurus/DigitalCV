@@ -86,11 +86,11 @@ function LoadContentErfarenhet(typ){
     var photoPath = "";
     if(typ == "Utbildningar"){
         list = utbildningar;
-        photoPath = "./Images/Photo02.jpg";
+        photoPath = "./images/Photo02.jpg";
     }
     else if(typ == "Anställningar"){
         list = anstallningar;
-        photoPath = "./Images/Photo01.jpg";
+        photoPath = "./images/Photo01.jpg";
     }
     else{
         console.log("Error: No array was found.")
