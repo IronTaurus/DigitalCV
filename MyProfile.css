@@ -2,37 +2,31 @@ Body{
   background-color: rgb(88, 90, 99);
   background-image: url("./images/BG.png");
   background-size: cover;
-  margin-left: auto;
-  margin-right: auto;
+margin: 0%;
 }
 
 html{
   overflow-y: hidden;
-}
-/* #ToppVy {
-  background-color: rgb(44, 97, 212);
-  height: fit-content;
   margin: 0%;
-  text-align: center;
-  width: auto;
-} */
+}
 #MainGrid{
-  top: 0px;
   display: grid;
   height: 100vh;
-  grid-template-rows: 4% 90% 6%;
-  align-items: center;
+  grid-template-rows: [topRow]auto [midRow]86vh [botRow]auto;
+  justify-items: stretch;
+  /* align-items: center;
+  align-content: center; */
 }
 
 #TopGrid{
   position: sticky;
-  top: 0px;
+  top: 0%;
   background-color: rgb(43, 45, 52);
   align-items: center;
   display: grid;
   grid-template-columns: auto auto auto;
-  padding: 0.5em;
-  height: max-content;
+  height: 7vh;
+  --TopRow: 7vh
 }
 #TopLeftCol{
   display: flex;
@@ -45,24 +39,26 @@ html{
   align-items: end;
 }
 #MidGrid{
-  height: 80vh;
+  align-self: center;
+  height: auto;
   width: 100%;
-  margin: auto;
   display: grid;
   grid-template-columns: auto auto auto;
+  justify-content: space-evenly;
 }
 
 #MidMidCol{
+  max-height: 84vh;
   height: auto;
   align-items: center;
-  margin: 4% auto 4% auto;
-  overflow-y: auto;
+  margin: auto;
+  overflow-y: scroll;
 }
 #MyPhoto{
-  width: 20em;
-  height: 20em;
+  width: auto;
+  height: 25em;
   position:relative;
-  top: 20%;
+  top: 10%;
   align-self: center;
 }
 #MidMidCol::-webkit-scrollbar {
@@ -79,28 +75,29 @@ html{
   border: 2px;  /* creates padding around scroll thumb */
 }
 #MidLeftCol{
-  align-items: center;
   text-align: left;
-  left:0%;
-  margin: auto;
+  align-self: center;
 }
 #MidRightCol{
-  align-items: center;
-  right: 0%;
+  /* align-items: center; */
+  /* right: 0%; */
   text-align: right;
   margin: auto;
 }
 #BotGrid{
+  bottom: 0%;
 background-color: rgb(43, 45, 52);
 position: sticky;
-bottom: 0px;
 align-items: start;
 display: grid;
 grid-template-columns: auto auto auto;
+height: 7vh;
+--BotRow: 7vh
 }
 #BotLeftCol{
   display: flex;
-  align-items: start;
+  -ms-flex-align: start;
+  align-items: center;
   margin: 0%;
   width: fit-content;
 }
@@ -115,8 +112,6 @@ grid-template-columns: auto auto auto;
   margin: 0%;
 }
 .Logotypes{
-  height: auto;
-  width: auto;
   margin: 0;
   padding: 0.1em;
 }
@@ -177,15 +172,13 @@ color: beige;
 .TopMenyVal:hover{
     /* background-color: rgb(52, 194, 255); */
     background-color: rgb(56, 65, 77);
-    font-size: 14px;
-    font-weight: bold;
 }
 
 #listRad{
   display: grid;
   width: 50%;
 }
-#Photo{
+.Photo{
   box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
 }
 

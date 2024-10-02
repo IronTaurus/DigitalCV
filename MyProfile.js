@@ -1,7 +1,13 @@
 
 console.log("Script loaded...")
 
-const anstallningar = [
+const utbildningar = [
+    {Plats: "Plushögskolan Gävle", Titel: ".NET Utvecklare", År:"2021 - 2023", Beskrivining: "Utbildning på 2 år inom .NET Utveckling som inkluderade två LIA perioder."},
+    {Plats: "Uppsala universitet campus Gotland", Titel: "Spelutveckling Grafik", År: "2011", Beskrivining: "En utbildning på 3 år inom Speldesign och utveckling med inriktning av grafik." +
+        "Den grafiska delen inkluderade 3D och 2D grafik."},
+    {Plats: "Högskolan Gävle", Titel: "Grundläggande Java", År: "2009", Beskrivining: "En enskild kurs inom grunder i java programmering."},
+];
+const anställningar = [
     {Plats: "Nilar", Titel: "Utvecklare", År: "2023", 
         Beskrivining: "Efter 10 veckors praktik via skolan blev jag anställd på viss tid som systemutvecklare för Nilar batterifabrik i Gävle. " +
         "Mitt arbete involverar att skapa ett program som låter användaren att observera eventuella fel i produkten som en AI tagit fram under produktionen." +
@@ -14,12 +20,6 @@ const anstallningar = [
     {Plats: "Sjöboden allt inom fisk", Titel: "Fiskrensare", År: "2016", Beskrivining: "Ett arbete som är fysiskt krävande där olika avdelningar har olika fysiska arbeten och allt ska ske i ett raskt tempo."},
     {Plats: "Storkök Gävle sjukhus", Titel: "Köksarbetare", År: "2015", Beskrivining: "Ett fysiskt krävande arbete som kräver noggranhet och stresstålighet. Arbetet involverade hantera inkommande disk samt göra iordning matbrickor till alla besökarna utefter orders i ett högt tempo."}
 ];
-const utbildningar = [
-    {Plats: "Plushögskolan Gävle", Titel: ".NET Utvecklare", År:"2021 - 2023", Beskrivining: "Utbildning på 2 år inom .NET Utveckling som inkluderade två LIA perioder."},
-    {Plats: "Uppsala universitet campus Gotland", Titel: "Spelutveckling Grafik", År: "2011", Beskrivining: "En utbildning på 3 år inom Speldesign och utveckling med inriktning av grafik." +
-        "Den grafiska delen inkluderade 3D och 2D grafik."},
-    {Plats: "Högskolan Gävle", Titel: "Grundläggande Java", År: "2009", Beskrivining: "En enskild kurs inom grunder i java programmering."},
-]
 
 function CleanArea(area){
         let child = area.lastElementChild;
@@ -74,32 +74,36 @@ function LoadContentStart(){
     //src="./images/me_circle.png" width="200" height="200"
 
 }
+
+function loadContent(name) {
+    console.log("'loadContent' has loaded...")
+    fetch(`${name}.html`)
+    .then(res => {
+        if(res.ok){
+            return res.text();
+        }
+    })
+    .then(htmlData => {
+        document.getElementById("MidGrid").innerHTML = htmlData;
+        LoadContentErfarenhet(name);
+    });
+}
 function LoadContentErfarenhet(typ){
     var MidLeftCol = document.getElementById("MidLeftCol");
     var MidMidCol = document.getElementById("MidMidCol");
     var MidRightCol = document.getElementById("MidRightCol");
-    CleanArea(MidLeftCol);
-    CleanArea(MidMidCol);
-    CleanArea(MidRightCol);
 
     var list = [];
-    var photoPath = "";
     if(typ == "Utbildningar"){
         list = utbildningar;
-        photoPath = "./images/Photo02.jpg";
     }
     else if(typ == "Anställningar"){
-        list = anstallningar;
-        photoPath = "./images/Photo01.jpg";
+        list = anställningar;
     }
     else{
         console.log("Error: No array was found.")
     }
 
-    var photo = document.createElement("img");
-    photo.setAttribute("id", "Photo");
-    photo.src = photoPath;
-    MidLeftCol.appendChild(photo);
     list.forEach(element => {
         var elementDiv = document.createElement("div");
         elementDiv.setAttribute("id", "listRad");
