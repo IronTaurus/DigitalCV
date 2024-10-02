@@ -8,6 +8,7 @@ margin: 0%;
 html{
   overflow-y: hidden;
   margin: 0%;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 #MainGrid{
   display: grid;
@@ -29,6 +30,7 @@ html{
   --TopRow: 7vh
 }
 #TopLeftCol{
+  height: fit-content;
   display: flex;
   align-items: start;
 }
@@ -146,29 +148,17 @@ height: 7vh;
 #Container {
   display: flex;
 }
-/* #VisningsFönster {
-  background-color: rgba(240, 248, 255, 0.7);
-  margin: 0em 2em 0em 2em;
-  padding: 1em;
-  width: 100%;
-} */
 
-/* #SidMeny {
-  display: flex;
-  height: 1.5em;
-  z-index: 99;
-} */
 .TopMenyVal {
-height: auto;
-width: fit-content;
-color: beige;
-  padding: 0.5em;
-  font-size: 14px;
-  margin: 0 10px 0 0;
+  color: beige;
+  padding: 0.4em;
+  font-size: 0.9em;
+  margin: 0 8px 0 0;
   background-color: rgb(46, 53, 67);
   cursor: pointer;
-  border-radius: 1em
+  border-radius: 1em;
 }
+
 .TopMenyVal:hover{
     /* background-color: rgb(52, 194, 255); */
     background-color: rgb(56, 65, 77);
