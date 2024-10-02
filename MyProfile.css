@@ -38,7 +38,10 @@ html{
   align-items: center;
 }
 #TopRightCol{
+  height: fit-content;
+  display: flex;
   align-items: end;
+  justify-content: flex-end;
 }
 #MidGrid{
   align-self: center;
@@ -153,7 +156,7 @@ height: 7vh;
   color: beige;
   padding: 0.4em;
   font-size: 0.9em;
-  margin: 0 8px 0 0;
+  margin: 0 0.3em 0 0.3em;
   background-color: rgb(46, 53, 67);
   cursor: pointer;
   border-radius: 1em;
@@ -194,4 +197,10 @@ p{
   font-size: 16px;
   width: max-content;
   max-width: 40em;
+}
+#DownloadCV{
+background-image: url("./images/printer_w.png");
+height: 30px;
+width: 30px;
+margin-right: 0.3em;
 }

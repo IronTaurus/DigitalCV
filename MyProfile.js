@@ -74,6 +74,25 @@ function LoadContentStart(){
     //src="./images/me_circle.png" width="200" height="200"
 
 }
+function downloadCV(){
+        //create or obtain the file's content
+        var content = 'This is a text';
+      
+        //create a file and put the content, name and type
+        var file = new File(["\ufeff"+content], 'CV.pdf', {type: "text/plain:charset=UTF-8"});
+      
+        //create a ObjectURL in order to download the created file
+        url = window.URL.createObjectURL(file);
+      
+        //create a hidden link and set the href and click it
+        var a = document.createElement("a");
+        a.style = "display: none";
+        a.href = url;
+        a.download = file.name;
+        a.click();
+        window.URL.revokeObjectURL(url);
+      
+};
 
 function loadContent(name) {
     console.log("'loadContent' has loaded...")
