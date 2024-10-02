@@ -199,8 +199,15 @@ p{
   max-width: 40em;
 }
 #DownloadCV{
-background-image: url("./images/printer_w.png");
-height: 30px;
-width: 30px;
+background-image: url("./images/printer_b.png");
+background-repeat: no-repeat;
+background-position: center;
+background-color: rgb(46, 53, 67);
+border-radius: 50%;
+height: 40px;
+width: 40px;
 margin-right: 0.3em;
+}
+#DownloadCV:hover{
+  background-color: rgb(56, 65, 77);
 }
